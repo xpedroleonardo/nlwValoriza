@@ -4,15 +4,18 @@ import { CreateUserController } from "./controllers/CreateUserController";
 import { CreateTagController } from "./controllers/CreateTagController";
 import { ensureAdmin } from "./middiewares/ensureAdmin";
 import { AuthenticateUserController } from "./controllers/AuthenticateUserController";
+import { CreateComplimentController } from "./controllers/CreateComplimentController";
 
-const router = Router()
+const router = Router();
 
-const createUserController = new CreateUserController()
-const authenticateUserController = new AuthenticateUserController()
-const createTagController = new CreateTagController()
+const createUserController = new CreateUserController();
+const authenticateUserController = new AuthenticateUserController();
+const createTagController = new CreateTagController();
+const createComplimentController = new CreateComplimentController();
 
-router.post('/users', createUserController.handle)
-router.post('/tags', ensureAdmin, createTagController.handle)
-router.post('/login', authenticateUserController.handle)
+router.post("/users", createUserController.handle);
+router.post("/tags", ensureAdmin, createTagController.handle);
+router.post("/login", authenticateUserController.handle);
+router.post("/compliments", createComplimentController.handle);
 
-export {router}
+export { router };

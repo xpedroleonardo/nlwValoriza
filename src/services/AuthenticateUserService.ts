@@ -27,7 +27,7 @@ class AuthenticateUserService {
 
     const token = sign({
       email: user.email
-    },"", {
+    },"ffhanku-dfjnasdk", {
       subject: user.id,
       expiresIn: "1d"
     })
