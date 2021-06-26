@@ -11,6 +11,11 @@ export function ensureAuthenticated(
   next: NextFunction
 ) {
   const authToken = request.headers.authorization;
+
+  if (!authToken) {
+    return response.status(401).end();
+  }
+
   const [, token] = authToken.split(" ");
 
   if (!token) {
@@ -18,7 +23,7 @@ export function ensureAuthenticated(
   }
 
   try {
-    const { sub } = verify(token, "ffhanku-dfjnasdk") as IPayLoad;
+    const { sub } = verify(token, process.env.JWT_SECRET) as IPayLoad;
 
     request.user_id = sub;
 

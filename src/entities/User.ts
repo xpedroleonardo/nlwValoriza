@@ -1,9 +1,15 @@
-import {Entity, PrimaryColumn, Column, CreateDateColumn, UpdateDateColumn} from "typeorm";
-import { v4 as uuid } from 'uuid'
+import { Exclude } from "class-transformer";
+import {
+  Entity,
+  PrimaryColumn,
+  Column,
+  CreateDateColumn,
+  UpdateDateColumn,
+} from "typeorm";
+import { v4 as uuid } from "uuid";
 
-@Entity('users')
- class User {
-
+@Entity("users")
+class User {
   @PrimaryColumn()
   readonly id: string;
 
@@ -13,6 +19,7 @@ import { v4 as uuid } from 'uuid'
   @Column()
   email: string;
 
+  @Exclude()
   @Column()
   password: string;
 
@@ -25,11 +32,11 @@ import { v4 as uuid } from 'uuid'
   @UpdateDateColumn()
   updated_at: Date;
 
-  constructor (){
+  constructor() {
     if (!this.id) {
-      this.id = uuid()
+      this.id = uuid();
     }
   }
 }
 
-export {User}
+export { User };
