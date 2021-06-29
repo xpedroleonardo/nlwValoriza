@@ -45,7 +45,7 @@ $ yarn typeorm migration:run
 $ yarn dev
 ```
 
-O app estará disponível no seu nevegador pelo endereço http://localhost:3000.
+A API estará disponível no endereço http://localhost:3000.
 
 ## 💻 Projeto
 
