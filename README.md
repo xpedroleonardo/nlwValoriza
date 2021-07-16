@@ -1,11 +1,5 @@
 <h1 align="center">nlwValoriza</h1>
 
-<p align="center">
-  <img src="https://img.shields.io/github/stars/xpedroleonardo/LetmeAsk?label=stars&message=MIT&color=0b87a3&labelColor=000000" alt="Stars">
-
-  <img  src="https://img.shields.io/static/v1?label=license&message=MIT&color=0b87a3&labelColor=000000" alt="License">   
-</p>
-
 <h1 align="center">
   <img alt="nlwValoriza" src="./README.png" />
 </h1>
@@ -57,4 +51,4 @@ Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para
 
 ---
 
-Feito com ❤ by [Pedro Leonrardo](https://github.com/xpedroleonardo)
+Feito com ❤ by [Pedro Leonardo](https://github.com/xpedroleonardo)
